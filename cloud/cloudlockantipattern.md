@@ -90,3 +90,4 @@ process()
   }
 }
 ```
+In this solution, we have made the operation process() to be non-blocking and it processes the tasks owned by it sequentially. This process() function does nothing if the owned set of the process is empty. There is another operation which operates in the background and runs the *getOwnership()* consensus operation to get the ownership of the resource. If there are **N** distinct target resources,  only **N** consensus problems will be solved.
