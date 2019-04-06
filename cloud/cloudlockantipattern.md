@@ -39,7 +39,6 @@ EndProcessing(p,t)
 The problem is to find a sequence of operations such that the pre-conditions are not violated. This means the target resource of all the tasks are same.
 
 ## The Anti-Pattern
-### Simple Case
 To implement a solution to the above problem, many of us are tempted to write the process as given below.
 ```
 process()
@@ -58,4 +57,4 @@ process()
   }
 }
 ```
-On first look, this solution looks good. If all the processes are within a machine, the *lock()* function can be implemented using a hardware lock. But, in a distributed environment, where the processes are distributed across machines, the *lock()* function is costly. Under the hood, this *lock()* function solves the **consensus** problem.
+On first look, this solution looks good. If all the processes are within a machine, the *lock()* function can be implemented using a hardware lock. But, in a distributed environment, where the processes are distributed across machines, the *lock()* function is costly. Under the hood, this *lock()* function solves the **consensus** problem. Each *lock()* in the above code block solves one instance of the consensus problem. To understand why consensus problems are costly, please refer the [Part-Time Parliament](http://lamport.azurewebsites.net/pubs/lamport-paxos.pdf)  paper, [RAFT protocol](https://raft.github.io/), [Zookeeper](https://zookeeper.apache.org/) and [Chubby](https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf)
