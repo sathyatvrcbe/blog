@@ -5,4 +5,6 @@ This scenario might arise in distributed systems as well. When there are multipl
 
 ## The problem
 Let's consider a set ***S*** which contains a finite set of tasks to be executed and ***R*** be the set of resources associated with the tasks. Let's define the following function on any task t belonging to ***S***:
-  - **targetResource** : s -> R
+  - **targetResource** : ***S*** -> ***R***
+  
+Let ***P*** be the set of concurrent processes which will be executing the set of tasks ***S***.
