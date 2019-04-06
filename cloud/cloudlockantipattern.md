@@ -18,6 +18,7 @@ Let's define the operation *StartProcessing* and *EndProcessing* on process ***p
 /// Pre Conditions
 /// processState(p) = Idle
 /// taskState(t) = NotExecuted
+/// there exists no process 'q' such that processState(p) = Executing and targetResource(executes(q)) = targetResource(p) equals 
 StartProcessing(p,t)
 {
   processState(p) = Executing
@@ -35,8 +36,8 @@ EndProcessing(p,t)
 }
 ```
 
-The problem is to find a sequence of operations such that the pre-conditions are not violated.
+The problem is to find a sequence of operations such that the pre-conditions are not violated. This means the target resource of all the tasks are same.
 
 ## The Anti-Pattern
 ### Simple Case
-Let's consider the case where **targetResource(t) = r** for every ***t*** belonging to ***T*** and ***r*** belongs to ***R***.
+Let's consider the case where **targetResource(t) = r** for every ***t*** belonging to ***T*** and ***r*** belongs to ***R***. This means the target resource of all the processes is same.
