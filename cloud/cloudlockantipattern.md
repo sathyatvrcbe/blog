@@ -38,3 +38,5 @@ EndProcessing(p,t)
 The problem is to find a sequence of operations such that the pre-conditions are not violated.
 
 ## The Anti-Pattern
+### Simple Case
+Let's consider the case where **targetResource(t) = r** for every ***t*** belonging to ***T*** and ***r*** belongs to ***R***.
