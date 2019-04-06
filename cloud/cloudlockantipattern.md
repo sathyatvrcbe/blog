@@ -11,3 +11,26 @@ Let's consider a set ***T*** which contains a finite set of tasks to be executed
 Let ***P*** be the set of concurrent processes which will be executing the set of tasks ***T***. Let S be the set of possible states of any process and ***S***={*Idle*, *Executing*}. Let's define functions on any process belonging to ***P*** as follows
   - **processState** : ***P*** -> ***S***
   - **executes** : ***P*** -> ***T*** U ∅
+
+### Operations
+Let's define the operation *StartProcessing* and *EndProcessing* on process ***p*** belonging to ***P*** and task ***t*** belonging to ***T***.
+```
+/// Pre Conditions
+/// processState(p) = Idle
+/// taskState(t) = NotExecuted
+StartProcessing(p,t)
+{
+  processState(p) = Executing
+  executes(p) = t
+}
+```
+```
+/// Pre Conditions
+/// executes(p) = t
+EndProcessing(p,t)
+{
+  processState(p) = Idle
+  executes(p) = ∅
+  taskState(t) = Executed
+}
+```
