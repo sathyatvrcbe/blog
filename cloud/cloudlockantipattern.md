@@ -1,1 +1,2 @@
-##Hello
+# Distributed Locks
+If we have multiple processes running in a physical or virtual machine, we may hit a scenario where one of the processes needs to have an exclusing access on some resources. When one process wants to write to a file and wants to make sure no other process writes to the file simultaneously, the first process would get a lock on the file, performs the write and releases the lock after finishing the write.
