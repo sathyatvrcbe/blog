@@ -9,4 +9,4 @@ Let's consider a set ***T*** which contains a finite set of tasks to be executed
   
 Let ***P*** be the set of concurrent processes which will be executing the set of tasks ***T***. Let S be the set of possible states of any process and ***S***={*Idle*, *Executing*}. Let's define functions on any process belonging to ***P*** as follows
   - **state** : ***P*** -> ***S***
-  - **executing** : ***P*** -> ***T*** U ∅
+  - **executes** : ***P*** -> ***T*** U ∅
