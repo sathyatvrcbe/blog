@@ -34,3 +34,7 @@ EndProcessing(p,t)
   taskState(t) = Executed
 }
 ```
+
+The problem is to find a sequence of operations such that the pre-conditions are not violated.
+
+## The Anti-Pattern
