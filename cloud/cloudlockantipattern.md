@@ -7,4 +7,5 @@ This scenario might arise in distributed systems as well. When there are multipl
 Let's consider a set ***T*** which contains a finite set of tasks to be executed and ***R*** be the set of resources associated with the tasks. Let's define the following function on any task t belonging to ***T***:
   - **targetResource** : ***T*** -> ***R***
   
-Let ***P*** be the set of concurrent processes which will be executing the set of tasks ***T***. Let S be the set of possible states of any process and ***S***={*Idle*, *Executing*}.
+Let ***P*** be the set of concurrent processes which will be executing the set of tasks ***T***. Let S be the set of possible states of any process and ***S***={*Idle*, *Executing*}. Let's define a function on any process belonging to ***P*** as follows
+  - **state** : ***P*** -> ***S***
