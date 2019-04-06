@@ -45,13 +45,13 @@ process()
 {
   while(true)
   {
-    pick a t belonging to the set T where taskState(t) = NotExecuted
+    pick a task t belonging to the set T where taskState(t) = NotExecuted
     lock(targetResource(T))
     {
       if(taskState(t) == NotExecuted)
       {
         StartProcessing(this,t);
-        FinistProcessing(this,t);
+        FinishProcessing(this,t);
       }
     }
   }
@@ -64,3 +64,29 @@ Apart from the problem of costly distributed locks, there are other problems whi
 Let us take the best case scenario where there are no conflicts between the processes while obtaining the locks. Even in this best case, this solution has to solve **Size(T)** consensus problems. If we compute the compleity of the system in terms of the number of consensus problem it solves, the computational complexity in the best case becomes order of **Size(T)**.
 
 ## A Better Solution
+For this problem, we connot skip solving consensus problem. But, we can reduce the number consensus problem that we solve. In the solution given above, we were trapped by the *lock()* semantics.
+
+Let's introduce another consensus problem called *getOwnership()*.
+```
+onStart()
+{
+  foreach unique targetResource r
+  {
+    success = getOwnership(r);
+    if(success)
+    {
+      ownedSet(this) += {r};
+    }
+  }
+}
+
+process()
+{
+  while(true)
+  {
+    pick a task t such that targetResource(t) belongs to ownedSet(this) and taskState(t) = NotExecuted
+    StartProcessing(this,t);
+    FinistProcessing(this,t);
+  }
+}
+```
