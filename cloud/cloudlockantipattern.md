@@ -40,4 +40,22 @@ The problem is to find a sequence of operations such that the pre-conditions are
 
 ## The Anti-Pattern
 ### Simple Case
-Let's consider the case where **targetResource(t) = r** for every ***t*** belonging to ***T*** and ***r*** belongs to ***R***. This means the target resource of all the processes is same.
+To implement a solution to the above problem, many of us are tempted to write the process as given below.
+```
+process()
+{
+  while(true)
+  {
+    pick a t belonging to the set T where taskState(t) = NotExecuted
+    lock(targetResource(T))
+    {
+      if(taskState(t) == NotExecuted)
+      {
+        StartProcessing(this,t);
+        FinistProcessing(this,t);
+      }
+    }
+  }
+}
+```
+On first look, this solution looks good. If all the processes are within a machine, the *lock()* function can be implemented using a hardware lock. But, in a distributed environment, where the processes are distributed across machines, the *lock()* function is costly. Under the hood, this *lock()* function solves the **consensus** problem.
