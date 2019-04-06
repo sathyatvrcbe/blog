@@ -4,9 +4,10 @@ If we have multiple processes running in a physical or virtual machine, we may h
 This scenario might arise in distributed systems as well. When there are multiple processes from multiple machines (physical or virtual) compete to have exclusive access to some resources, we might think that this problem can be solved by getting a distributed lock. But, the implementation of a distributed lock and a local lock are completely different. Using a distributed lock in a manner similar to a local lock can cause performance problems in some scenarios. We will discusss about one such scenario in the following sections.
 
 ## The problem
-Let's consider a set ***T*** which contains a finite set of tasks to be executed and ***R*** be the set of resources associated with the tasks. Let's define the following function on any task t belonging to ***T***:
+Let's consider a set ***T*** which contains a finite set of tasks to be executed and ***R*** be the set of resources associated with the tasks. Let ***R*** represent the state of the tasks and ***R*** = {*Executed*, *NotExecuted*}. Let's define the following function on any task t belonging to ***T***:
   - **targetResource** : ***T*** -> ***R***
+  - **taskState** : 
   
 Let ***P*** be the set of concurrent processes which will be executing the set of tasks ***T***. Let S be the set of possible states of any process and ***S***={*Idle*, *Executing*}. Let's define functions on any process belonging to ***P*** as follows
-  - **state** : ***P*** -> ***S***
+  - **processState** : ***P*** -> ***S***
   - **executes** : ***P*** -> ***T*** U ∅
