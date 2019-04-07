@@ -93,7 +93,37 @@ process()
 In this solution, we have made the operation process() to be non-blocking and it processes the tasks owned by it sequentially. This process() function does nothing if the owned set of the process is empty. There is another operation which operates in the background and runs the *getOwnership()* consensus operation to get the ownership of the resource. If there are **N** distinct target resources,  only **N** consensus problems will be solved. If any new process enters the system or if any process goes out of the system, to redistribute the tasks within the processes, *getOwnership()* operation can be processed on a subset of tasks. Assuming adding/removing of processes to the system as a rare scenario, we can safely assume that the number of consensus problems solved in this solution to be of order **N**.
 
 ## One Consensus Problem Per Target Resource Group
+One drawback of the above solution is its worst case performance. The input in which all the tasks have different target resources is the worst case input and with this input the solution solves the consensus problem ***Count(T)*** times which is same as obtaining a lock before executing every task. Let's try to reduce furhter the number of consensus problem that we solve.
+
 Let's define some more terminologies regarding groups and group memberships. Let ***G*** be the set of groups. Let *taskGroup()* be a function defined as follows:
-  - ***taskGroup*** : ***T*** -> ***G***
+  - ***groupForResource*** : ***R*** -> ***G***
   - ***uniqueTargetResources*** : ***PowerSet(T)*** -> ***PowerSet(R)*** where 
     - ***uniqueTargetResources(T)*** = Union of ***targetResourceType(t)*** for every ***t*** in ***T***
+    
+With the functions defined above, the solution to our original problem can be written as follows:
+```
+onStart()
+{
+  foreach g in G  
+  {
+    success = getOwnership(g);
+    if(success)
+    {
+      ownedSet(this) = ownedSet(this) U {g};
+    }
+  }
+}
+
+process()
+{
+  while(true)
+  {
+    pick a task t such that groupForResource(targetResource(t)) belongs to ownedSet(this) and taskState(t) = NotExecuted
+    StartProcessing(this,t);
+    FinistProcessing(this,t);
+  }
+}
+```
+This solution is similar to the one provided in the previous section except that the consensus problem is solved over the group instead of being solved over the resource. The effeciency of this solution depends upon the number of groups ***Count(G)*** and the concrete implementation of the function ***groupForResource***. 
+
+If the number of groups is lesser than the number of processes, then there will be some processes which will not have any groups assigned. This leads to ineffecient use of the computing resources available. So, the number of groups should be at least equal to the number of processes.
