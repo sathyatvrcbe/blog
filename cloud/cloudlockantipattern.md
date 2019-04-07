@@ -63,7 +63,7 @@ Apart from the problem of costly distributed locks, there are other problems whi
 
 Let us take the best case scenario where there are no conflicts between the processes while obtaining the locks. Even in this best case, this solution has to solve **Size(T)** consensus problems. If we compute the compleity of the system in terms of the number of consensus problem it solves, the computational complexity in the best case becomes order of **Size(T)**.
 
-## One consensus problem per target resource
+## One Consensus Problem Per Target Resource
 For this problem, we connot skip solving consensus problem. But, we can reduce the number consensus problem that we solve. In the solution given above, we were trapped by the *lock()* semantics.
 
 Let's introduce another consensus problem called *getOwnership()*.
@@ -92,4 +92,6 @@ process()
 ```
 In this solution, we have made the operation process() to be non-blocking and it processes the tasks owned by it sequentially. This process() function does nothing if the owned set of the process is empty. There is another operation which operates in the background and runs the *getOwnership()* consensus operation to get the ownership of the resource. If there are **N** distinct target resources,  only **N** consensus problems will be solved. If any new process enters the system or if any process goes out of the system, to redistribute the tasks within the processes, *getOwnership()* operation can be processed on a subset of tasks. Assuming adding/removing of processes to the system as a rare scenario, we can safely assume that the number of consensus problems solved in this solution to be of order **N**.
 
-
+## One Consensus Problem Per Target Resource Group
+Let's define some more terminologies regarding groups and group memberships. Let ***G*** be the set of groups. Let *taskGroup()* be a function defined as follows:
+  - ***taskGroup*** : ***T*** -> ***G***
