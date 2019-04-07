@@ -127,3 +127,5 @@ process()
 This solution is similar to the one provided in the previous section except that the consensus problem is solved over the group instead of being solved over the resource. The effeciency of this solution depends upon the number of groups ***Count(G)*** and the concrete implementation of the function ***groupForResource***. 
 
 If the number of groups is lesser than the number of processes, then there will be some processes which will not have any groups assigned. This leads to ineffecient use of the computing resources available. So, the number of groups should be at least equal to the number of processes.
+
+The function ***groupForResource*** should be designed in such a way that the number of tasks processed by each process is of equal numbers. When the tasks are more biased towards certain target resources, we cannot do much in improving the throughput of the system. But, what we save is the number of consensus problem that we solve.
