@@ -95,3 +95,5 @@ In this solution, we have made the operation process() to be non-blocking and it
 ## One Consensus Problem Per Target Resource Group
 Let's define some more terminologies regarding groups and group memberships. Let ***G*** be the set of groups. Let *taskGroup()* be a function defined as follows:
   - ***taskGroup*** : ***T*** -> ***G***
+  - ***uniqueTargetResources*** : ***PowerSet(T)*** -> ***PowerSet(R)*** where 
+    - ***uniqueTargetResources(T)*** = Union of ***targetResourceType(t)*** for every ***t*** in ***T***
