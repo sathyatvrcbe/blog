@@ -64,50 +64,18 @@
 
 நீங்கள் மேலே கூறியது போல செய்த மாற்றங்கள் `feature` கிளையில் உள்ள README கோப்பில் மட்டுமே இருக்கும். `master` கிளையிலுள்ள README கோப்பில் இம்மாற்றங்கள் இராது. இப்பொழுது உங்கள் `feature` கிளையானது `master` கிளையில் இருந்து வேறுபட்டிருக்கிறது.
 
-Step 4. Open a Pull Request
-Nice edits! Now that you have changes in a branch off of master, you can open a pull request.
+## நான்காம் படி - இழுவை கோரிக்கையை உருவாக்கவும்
+நீங்கள் செய்த மாற்றங்களை பிறருக்கு தெரிவிக்கவும் நீங்கள் செய்த மாற்றங்களை `master` கிளையில் சேர்க்கவும், மற்றவர்களை சீராய்வு செய்ய அழைக்கவும் இழுவை கோரிக்கையை உருவாக்க வேண்டும். இழுவை கோரிக்கையை நீங்க உருவாக்கியவுடன் உங்களால் இரு கிளைகளுக்கு நடுவில் இருக்கும் மாற்றங்களை காண முடியும். உங்கள் மாற்றங்களை சீராய்வு செய்ய சீராய்வாளர்களை அழைக்கமுடியும். சீராய்வாளர்கள் உலகின் எந்த மூலையில் இருந்து வேண்டுமானாலும் சீராய்வு செய்ய முடியும்.
 
-Pull Requests are the heart of collaboration on GitHub. When you open a pull request, you’re proposing your changes and requesting that someone review and pull in your contribution and merge them into their branch. Pull requests show diffs, or differences, of the content from both branches. The changes, additions, and subtractions are shown in green and red.
+### மூன்றாம் படியில் செய்த மாற்றங்களுக்கு இழுவை கோரிக்கை
+#### இழுவை கோரிக்கையை  உருவாக்குதல் 
+- உங்கள் களஞ்சியத்திற்கு செல்லவும். 
+- இப்பக்கத்தில் `Pull Request` என்றிருக்கும் தாவலை அழுத்தவும்.
+- பின்பு `New Pull Request` என்ற பொத்தானை அழுத்தவும்.
 
-As soon as you make a commit, you can open a pull request and start a discussion, even before the code is finished.
+#### கிளையை தேர்ந்தெடுக்கவும் 
+- `base` என்ற இடத்தில் `master` எனவும் `compare` என்ற இடத்தில `feature` எனவும் குறிக்கவும்
 
-By using GitHub’s @mention system in your pull request message, you can ask for feedback from specific people or teams, whether they’re down the hall or 10 time zones away.
-
-You can even open pull requests in your own repository and merge them yourself. It’s a great way to learn the GitHub flow before working on larger projects.
-
-Open a Pull Request for changes to the README
-Click on the image for a larger version
-
-Step	Screenshot
-Click the  Pull Request tab, then from the Pull Request page, click the green New pull request button.	pr-tab
-In the Example Comparisons box, select the branch you made, readme-edits, to compare with master (the original).	branch
-Look over your changes in the diffs on the Compare page, make sure they’re what you want to submit.	diff
-When you’re satisfied that these are the changes you want to submit, click the big green Create Pull Request button.	create-pull
-Give your pull request a title and write a brief description of your changes.	pr-form
-When you’re done with your message, click Create pull request!
-
-Tip: You can use emoji and drag and drop images and gifs onto comments and Pull Requests.
-
-
-Step 5. Merge your Pull Request
-In this final step, it’s time to bring your changes together – merging your readme-edits branch into the master branch.
-
-Click the green Merge pull request button to merge the changes into master.
-Click Confirm merge.
-Go ahead and delete the branch, since its changes have been incorporated, with the Delete branch button in the purple box.
-merge delete
-
-Celebrate!
-By completing this tutorial, you’ve learned to create a project and make a pull request on GitHub!
-
-Here’s what you accomplished in this tutorial:
-
-Created an open source repository
-Started and managed a new branch
-Changed a file and committed those changes to GitHub
-Opened and merged a Pull Request
-Take a look at your GitHub profile and you’ll see your new contribution squares!
-
-To learn more about the power of Pull Requests, we recommend reading the GitHub flow Guide. You might also visit GitHub Explore and get involved in an Open Source project.
-
-Tip: Check out our other Guides, YouTube Channel and On-Demand Training for more on how to get started with GitHub.
+#### வேற்றுமைகளை காணவும் 
+- மேற்சொன்னவாறு கிளைகளை தேர்ந்தெடுத்ததும் இரு கிளைகளுக்குமான வேற்றுமைகளை நீங்கள் அப்பக்கத்தின் கீழ்ப்பகுதியில் காணலாம்.
+- பின்பு `Create Pull Request` எனும் பொத்தானை மறுபடி அழுத்தவும். 
