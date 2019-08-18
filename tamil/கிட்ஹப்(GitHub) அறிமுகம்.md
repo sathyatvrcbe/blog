@@ -50,21 +50,19 @@
 
 இப்பொழுது உங்கள் களஞ்சியத்தில் இரண்டு கிளைகள் உள்ளன. ஒன்று `master`. இன்னொன்று `feature`. மேற்கூறிய இரு கிளைகளும் ஒன்றுபோல் வேற்றுமையின்றி இருக்கும். மூன்றாம் படியில் நாம் புதிதாக உருவாக்கிய கிளையில் சிறு மாற்றங்களை செய்வோம்.  
 
-Step 3. Make and commit changes
-Bravo! Now, you’re on the code view for your readme-edits branch, which is a copy of master. Let’s make some edits.
+## மூன்றாம் படி - மாற்றம் செய்து ஒப்படைத்தல்
+இப்பொழுது நீங்கள் `feature` எனும் கிளையில் உள்ளீர்கள். இந்த கிளைக்கும் `master` கிளைக்கும் இதுவரை எவ்வேறுபாடும் இல்லை. நாம் இப்பொழுது  `feature` கிளையில் சிறு மாற்றங்கள் செய்வோம்.
 
-On GitHub, saved changes are called commits. Each commit has an associated commit message, which is a description explaining why a particular change was made. Commit messages capture the history of your changes, so other contributors can understand what you’ve done and why.
+கிட்ஹப்பில் நாம் செய்த மாற்றங்களை சேமிக்க 'ஒப்படைத்தல்' எனும் செயலை செய்ய வேண்டும். ஒவ்வொரு ஒப்படைப்பிற்கும் ஒரு ஒப்படைத்தல் செய்தியை வழங்க வேண்டும். இந்த ஒப்படைத்தல் செய்தியானது நாம் செய்த மாற்றத்தை பிறர் புரிந்துகொள்ள உதவும்.
 
-Make and commit changes
-Click the README.md file.
-Click the  pencil icon in the upper right corner of the file view to edit.
-In the editor, write a bit about yourself.
-Write a commit message that describes your changes.
-Click Commit changes button.
-commit
+### மாற்றம் செய்து ஒப்படைத்தல் 
+- `README.md` எனும் கோப்பை அழுத்தவும்
+- பக்கத்தின் மேல் புறத்தில் இருக்கும் கரிக்கோல் உருவத்தை அழுத்தவும்
+- எழுதியில் உங்களைப்பற்றி சிறிது எழுதவும் 
+- நீங்கள் செய்த மாற்றத்தை விளக்கும் வகையில் ஒப்படைப்பு செய்தியை  `Commit Changes` என்ற எழுத்துப்பெட்டியில் உள்ளிடவும்
+- `Commit Changes` எனும் பொத்தானை  அழுத்தவும்
 
-These changes will be made to just the README file on your readme-edits branch, so now this branch contains content that’s different from master.
-
+நீங்கள் மேலே கூறியது போல செய்த மாற்றங்கள் `feature` கிளையில் உள்ள README கோப்பில் மட்டுமே இருக்கும். `master` கிளையிலுள்ள README கோப்பில் இம்மாற்றங்கள் இராது. இப்பொழுது உங்கள் `feature` கிளையானது `master` கிளையில் இருந்து வேறுபட்டிருக்கிறது.
 
 Step 4. Open a Pull Request
 Nice edits! Now that you have changes in a branch off of master, you can open a pull request.
