@@ -32,40 +32,21 @@
 ![Create Repo](createrepo.png)
 - `Create repository` என்பதை அழுத்தவும் 
 
+## இரண்டாம் படி - கிளையை உருவாக்குக
+ஒரு களஞ்சியத்தின் வெவ்வேறு பதிப்புகளின் மீது பங்களிப்பாற்ற  கிளைகள் உதவுகின்றன. ஒரு களஞ்சியத்தின் ஒவ்வொரு கிளையும் ஒவ்வொரு பதிப்பாகும். 
 
+வழக்கமாக நாம் உருவாக்கும் களஞ்சியத்தில் `master` எனும் ஒரு கிளை மட்டுமே இருக்கும். இக்கிளையே உங்கள் களஞ்சியத்தின் உறுதியான பாதிப்பாகும். நீங்கள் இக்கிளையில் ஏதேனும் மாற்றங்கள் செய்ய நினைத்தால் அதை நேரிடையாக செய்யாது இன்னொரு கிளையில் செய்வது வழக்கமாகும்.
 
-Step 2. Create a Branch
-Branching is the way to work on different versions of a repository at one time.
+ஒரு புதிய கிளையை ஏற்கனவே இருக்கும் ஒரு கிளையில் இருந்தே உருவாக்க முடியும். இப்பொழுது நாம் `master` கிளையில் இருந்து இன்னொரு கிளையை உருவாக்குவோம்.
 
-By default your repository has one branch named master which is considered to be the definitive branch. We use branches to experiment and make edits before committing them to master.
+### புதிய கிளையை உருவாக்க 
+- நீங்கள் உருவாக்கிய `hello-world` எனும் களஞ்சியத்திற்கு செல்லவும்
+- `branch : மாஸ்டர்` எனும் கீழ்விழும் பட்டியலை அழுத்தவும் 
+- கீழ்விழும் பட்டியல் வந்தவுடன் அதிலிருக்கும் எழுத்துப்பெட்டியில் தங்களது புதிய கிளையின் பெயரை `feature` என உள்ளிடவும்.
+- பின்பு `create branch` என்பதனை அழுத்தவும்.   
+![New Branch](newbranch.png)
 
-When you create a branch off the master branch, you’re making a copy, or snapshot, of master as it was at that point in time. If someone else made changes to the master branch while you were working on your branch, you could pull in those updates.
-
-This diagram shows:
-
-The master branch
-A new branch called feature (because we’re doing ‘feature work’ on this branch)
-The journey that feature takes before it’s merged into master
-a branch
-
-Have you ever saved different versions of a file? Something like:
-
-story.txt
-story-joe-edit.txt
-story-joe-edit-reviewed.txt
-Branches accomplish similar goals in GitHub repositories.
-
-Here at GitHub, our developers, writers, and designers use branches for keeping bug fixes and feature work separate from our master (production) branch. When a change is ready, they merge their branch into master.
-
-To create a new branch
-Go to your new repository hello-world.
-Click the drop down at the top of the file list that says branch: master.
-Type a branch name, readme-edits, into the new branch text box.
-Select the blue Create branch box or hit “Enter” on your keyboard.
-branch gif
-
-Now you have two branches, master and readme-edits. They look exactly the same, but not for long! Next we’ll add our changes to the new branch.
-
+இப்பொழுது உங்கள் களஞ்சியத்தில் இரண்டு கிளைகள் உள்ளன. ஒன்று `master`. இன்னொன்று `feature`. மேற்கூறிய இரு கிளைகளும் ஒன்றுபோல் வேற்றுமையின்றி இருக்கும். மூன்றாம் படியில் நாம் புதிதாக உருவாக்கிய கிளையில் சிறு மாற்றங்களை செய்வோம்.  
 
 Step 3. Make and commit changes
 Bravo! Now, you’re on the code view for your readme-edits branch, which is a copy of master. Let’s make some edits.
