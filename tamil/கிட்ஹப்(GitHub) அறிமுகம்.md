@@ -29,6 +29,7 @@
 - `hello-world` என்று பெயரிடவும்
 - சிறுகுறிப்பு எழுதவும்
 - `Initialize this repository with a README` என்பதை தேர்வு செய்யவும்.
+![Create Repo](createrepo.png)
 - `Create repository` என்பதை அழுத்தவும் 
 
 
