@@ -19,20 +19,18 @@
 
 > துணுக்கு: இப்பக்கத்தை வேறொரு உலாவி சாளரத்தில் திறந்து கொள்ளவும். இவ்வாறு செய்வதன் மூலம் நீங்கள் இப்பக்கத்தை பார்த்துக்கொண்டே கீழ் சொல்லப்பட்டிருக்கும் பயிற்சிகளை செய்ய இயலும்.
 
+## முதற்படி - களஞ்சியத்தை உருவாக்குக
+ஒரு களஞ்சியம் என்பது பொதுவாக இரு திட்டத்தை ஒழுங்கமைக்க பயன்படுத்தப்படுகிறது. நீங்கள் உங்கள் களஞ்சியத்தில் அடைவைகள், கோப்புகள், படங்கள், காணொளிகள் மாறும் இதர தகவல்களையும் சேர்த்து வைக்க முடியும். நீங்கள் நிர்வகிக்கும் திட்டத்தைப்பற்றி விளக்க README எனும் கோப்பை உங்கள் களஞ்சியத்துடன் இணைக்க கிட்ஹப் பரிந்துரைக்கிறது.
 
-Step 1. Create a Repository
-A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs. We recommend including a README, or a file with information about your project. GitHub makes it easy to add one at the same time you create your new repository. It also offers other common options such as a license file.
+உங்கள் சிந்தனைகளையும் எண்முறை வளங்களையும் சேமிக்கவும் பகிரவும் களஞ்சியங்களை பயன்படுத்தலாம். உங்கள் திட்டத்தின் மீதான விவாதங்களையும் இக்களஞ்சியத்தின் மீது நடத்தலாம். இப்பொழுது "hello world" என்றொரு களஞ்சியத்தை உருவாக்கி மேற்கூறியவற்றை எவ்வாறு செய்வது என்று பாப்போம்.
 
-Your hello-world repository can be a place where you store ideas, resources, or even share and discuss things with others.
+### புதிய களஞ்சியத்தை உருவாக்க
+- கிட்ஹப் பக்கத்தின் மேல்புறம் வலது மூலையில் சிறுபடம் ஒன்றிருக்கும். அதனருகில் இருக்கும் *+* குறியீட்டை அழுத்தவும். அதன் பின்பு `New Repository` என்பதை அழுத்தவும்.  
+- `hello-world` என்று பெயரிடவும்
+- சிறுகுறிப்பு எழுதவும்
+- `Initialize this repository with a README` என்பதை தேர்வு செய்யவும்.
+- `Create repository` என்பதை அழுத்தவும் 
 
-To create a new repository
-In the upper right corner, next to your avatar or identicon, click  and then select New repository.
-Name your repository hello-world.
-Write a short description.
-Select Initialize this repository with a README.
-new-repo-form
-
-Click Create repository.
 
 
 Step 2. Create a Branch
